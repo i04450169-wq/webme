@@ -1,228 +1,837 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#090d18" />
-  <meta name="description" content="الموقع الشخصي لإسلام سامح — مصمم ومطور وصانع أفكار رقمية." />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090d18">
+  <meta name="description" content="الموقع الشخصي لإسلام سامح — مصمم ومطور وصانع أفكار رقمية.">
   <title>ESLAM SAMEH | Portfolio</title>
+
   <style>
-    :root{--bg:#090d18;--panel:#101827;--panel2:#141f31;--line:rgba(148,163,184,.16);--text:#f4f7fb;--muted:#9aa9bd;--accent:#8b9cff;--accent2:#54d6c8;--shadow:0 24px 70px rgba(0,0,0,.28)}
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 80% 0%,rgba(83,102,214,.15),transparent 36%),radial-gradient(ellipse at 0% 40%,rgba(40,186,177,.08),transparent 30%),var(--bg);color:var(--text);font-family:Tahoma,Arial,sans-serif;line-height:1.8}
-    a{color:inherit;text-decoration:none}button{font:inherit}.container{width:min(1120px,calc(100% - 40px));margin:auto}
-    .nav-wrap{position:sticky;top:0;z-index:20;background:rgba(9,13,24,.78);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
-    nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{font-weight:900;letter-spacing:1.5px;font-size:18px;direction:ltr}.brand span{color:var(--accent)}
-    .nav-links{display:flex;gap:26px;color:var(--muted);font-size:14px}.nav-links a:hover{color:var(--text)}.nav-actions{display:flex;align-items:center;gap:10px}
-    .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:11px 18px;border:1px solid var(--line);border-radius:12px;color:var(--text);background:rgba(255,255,255,.035);cursor:pointer;transition:.2s}
-    .btn:hover{transform:translateY(-2px);border-color:rgba(139,156,255,.6)}.btn.primary{background:linear-gradient(135deg,#8797ff,#6578e8);border:0;color:#081020;font-weight:800;box-shadow:0 10px 30px rgba(112,130,255,.22)}
-    .menu-btn{display:none;background:transparent;color:var(--text);border:1px solid var(--line);border-radius:10px;padding:8px 11px}
-    .hero{padding:100px 0 84px;display:grid;grid-template-columns:1.25fr .75fr;align-items:center;gap:55px;min-height:610px}
-    .eyebrow{display:inline-flex;align-items:center;gap:9px;padding:7px 12px;border:1px solid var(--line);border-radius:99px;color:#c3cfff;background:rgba(139,156,255,.07);font-size:13px}
-    .dot{width:8px;height:8px;border-radius:50%;background:var(--accent2);box-shadow:0 0 14px var(--accent2)}
-    h1{font-size:clamp(42px,6vw,70px);line-height:1.2;margin:22px 0 18px;letter-spacing:-2px}h1 .gradient{background:linear-gradient(90deg,#aab5ff,#63dccc);-webkit-background-clip:text;background-clip:text;color:transparent}
-    .hero p{max-width:620px;color:var(--muted);font-size:18px;margin:0 0 28px}.hero-cta{display:flex;gap:12px;flex-wrap:wrap}
-    .visual{min-height:360px;position:relative;display:grid;place-items:center}.orb{width:260px;height:260px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#c4cbff 0,#8998ff 20%,#4655a6 48%,#18213c 72%);box-shadow:0 0 90px rgba(120,138,255,.23),inset -20px -25px 50px rgba(0,0,0,.3);position:relative}
-    .orb:before,.orb:after{content:"";position:absolute;border:1px solid rgba(166,183,255,.45);border-radius:50%;inset:-34px;transform:rotate(-24deg) scaleY(.42)}.orb:after{inset:-58px;transform:rotate(35deg) scaleY(.35);border-color:rgba(84,214,200,.38)}
-    .initials{position:absolute;font-size:78px;font-weight:900;letter-spacing:-8px;color:#fff;text-shadow:0 8px 30px rgba(0,0,0,.35);direction:ltr}
-    .float-card{position:absolute;background:rgba(18,28,45,.88);border:1px solid var(--line);backdrop-filter:blur(12px);padding:12px 16px;border-radius:14px;box-shadow:var(--shadow);font-size:13px;color:#dbe4f4}
-    .float-card.one{top:48px;right:0}.float-card.two{bottom:48px;left:0}
-    section{padding:76px 0}.section-head{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:30px}.kicker{color:var(--accent2);font-size:13px;font-weight:700}.section-title{font-size:clamp(28px,4vw,40px);margin:5px 0 0}.section-desc{color:var(--muted);max-width:500px;margin:0}
-    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.card{background:linear-gradient(145deg,rgba(20,31,49,.88),rgba(13,21,35,.9));border:1px solid var(--line);border-radius:20px;padding:26px;box-shadow:var(--shadow)}
-    .card h3{margin:0 0 10px;font-size:19px}.card p{color:var(--muted);margin:0}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}.stat{padding:18px;border:1px solid var(--line);border-radius:15px;background:rgba(255,255,255,.025)}.stat strong{display:block;font-size:25px;color:#c3ccff}.stat span{font-size:12px;color:var(--muted)}
-    .skills{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.skill{padding:20px;border-radius:16px;border:1px solid var(--line);background:rgba(17,27,43,.75)}.skill .ico{font-size:24px}.skill h3{font-size:15px;margin:9px 0 3px}.skill p{font-size:12px;color:var(--muted);margin:0}
-    .projects{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.project{overflow:hidden;padding:0}.project-art{height:155px;display:grid;place-items:center;background:radial-gradient(circle at 50% 30%,rgba(137,151,255,.32),transparent 55%),linear-gradient(135deg,#1b2944,#111827);border-bottom:1px solid var(--line);font-size:38px}.project-body{padding:20px}.project-body p{font-size:13px}.tag{display:inline-block;font-size:11px;color:#c4d0ff;background:rgba(139,156,255,.1);padding:4px 9px;border-radius:99px;margin:10px 4px 0 0}
-    .contact-box{display:flex;align-items:center;justify-content:space-between;gap:25px;background:linear-gradient(120deg,rgba(101,120,232,.2),rgba(84,214,200,.08));border:1px solid rgba(139,156,255,.24);border-radius:22px;padding:34px}.contact-box p{color:var(--muted);margin:5px 0 0}.contact-actions{display:flex;gap:10px;flex-wrap:wrap}
-    footer{padding:28px 0;border-top:1px solid var(--line);color:var(--muted);font-size:13px}.footer-inner{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
-    .admin-modal{position:fixed;inset:0;background:rgba(2,6,15,.78);backdrop-filter:blur(10px);display:none;align-items:center;justify-content:center;padding:18px;z-index:50}
-    .admin-modal.show{display:flex}.admin-panel{width:min(560px,100%);max-height:90vh;overflow:auto;background:#101827;border:1px solid var(--line);border-radius:20px;padding:24px;box-shadow:var(--shadow)}
-    .admin-top{display:flex;align-items:center;justify-content:space-between;gap:15px;margin-bottom:15px}.admin-panel h2{margin:0;font-size:24px}
-    .admin-form{display:grid;gap:12px}.admin-form label{display:grid;gap:6px;color:#cbd5e1;font-size:13px}
-    .admin-form input,.admin-form textarea{width:100%;background:#0a1220;border:1px solid var(--line);border-radius:10px;padding:12px;color:var(--text);font:inherit;outline:none}
-    .admin-form input:focus,.admin-form textarea:focus{border-color:var(--accent)}.admin-form textarea{min-height:80px;resize:vertical}
-    .admin-note{font-size:12px;color:var(--muted);margin:0 0 14px}.admin-list{display:grid;gap:8px;margin-top:16px}.admin-entry{display:flex;justify-content:space-between;gap:10px;align-items:center;background:rgba(255,255,255,.035);padding:10px 12px;border-radius:10px;font-size:13px}
+    :root {
+      --bg:#090d18;
+      --panel:#101827;
+      --line:rgba(148,163,184,.16);
+      --text:#f4f7fb;
+      --muted:#9aa9bd;
+      --accent:#8b9cff;
+      --accent2:#54d6c8;
+      --shadow:0 24px 70px rgba(0,0,0,.28);
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      background:
+        radial-gradient(ellipse at 80% 0%,rgba(83,102,214,.15),transparent 36%),
+        radial-gradient(ellipse at 0% 40%,rgba(40,186,177,.08),transparent 30%),
+        var(--bg);
+      color:var(--text);
+      font-family:Tahoma,Arial,sans-serif;
+      line-height:1.8;
+    }
+
+    a{color:inherit;text-decoration:none}
+    button{font:inherit;cursor:pointer}
+    .container{width:min(1120px,calc(100% - 40px));margin:auto}
+
+    .nav-wrap{
+      position:sticky;top:0;z-index:20;
+      background:rgba(9,13,24,.85);
+      backdrop-filter:blur(18px);
+      border-bottom:1px solid var(--line);
+    }
+
+    nav{
+      height:76px;display:flex;align-items:center;
+      justify-content:space-between;gap:20px;
+    }
+
+    .brand{
+      font-weight:900;letter-spacing:1.5px;
+      font-size:18px;direction:ltr;
+    }
+    .brand span{color:var(--accent)}
+
+    .nav-links{
+      display:flex;gap:26px;
+      color:var(--muted);font-size:14px;
+    }
+    .nav-links a:hover{color:var(--text)}
+
+    .nav-actions{display:flex;align-items:center;gap:10px}
+
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;
+      gap:9px;padding:11px 18px;
+      border:1px solid var(--line);border-radius:12px;
+      color:var(--text);background:rgba(255,255,255,.035);
+      transition:.2s;
+    }
+    .btn:hover{transform:translateY(-2px);border-color:var(--accent)}
+    .btn.primary{
+      background:linear-gradient(135deg,#8797ff,#6578e8);
+      border:0;color:#081020;font-weight:800;
+      box-shadow:0 10px 30px rgba(112,130,255,.22);
+    }
+
+    .menu-btn{
+      display:none;background:transparent;color:var(--text);
+      border:1px solid var(--line);border-radius:10px;padding:8px 11px;
+    }
+
+    .hero{
+      padding:100px 0 84px;
+      display:grid;grid-template-columns:1.25fr .75fr;
+      align-items:center;gap:55px;min-height:610px;
+    }
+
+    .eyebrow{
+      display:inline-flex;align-items:center;gap:9px;
+      padding:7px 12px;border:1px solid var(--line);
+      border-radius:99px;color:#c3cfff;
+      background:rgba(139,156,255,.07);font-size:13px;
+    }
+
+    .dot{
+      width:8px;height:8px;border-radius:50%;
+      background:var(--accent2);box-shadow:0 0 14px var(--accent2);
+    }
+
+    h1{
+      font-size:clamp(42px,6vw,70px);
+      line-height:1.2;margin:22px 0 18px;letter-spacing:-2px;
+    }
+
+    h1 .gradient{
+      background:linear-gradient(90deg,#aab5ff,#63dccc);
+      -webkit-background-clip:text;background-clip:text;color:transparent;
+    }
+
+    .hero p{max-width:620px;color:var(--muted);font-size:18px;margin:0 0 28px}
+    .hero-cta{display:flex;gap:12px;flex-wrap:wrap}
+
+    .visual{min-height:360px;position:relative;display:grid;place-items:center}
+    .orb{
+      width:260px;height:260px;border-radius:50%;
+      background:radial-gradient(circle at 35% 30%,#c4cbff 0,#8998ff 20%,#4655a6 48%,#18213c 72%);
+      box-shadow:0 0 90px rgba(120,138,255,.23),inset -20px -25px 50px rgba(0,0,0,.3);
+      position:relative;
+    }
+
+    .orb:before,.orb:after{
+      content:"";position:absolute;border:1px solid rgba(166,183,255,.45);
+      border-radius:50%;inset:-34px;
+      transform:rotate(-24deg) scaleY(.42);
+    }
+    .orb:after{
+      inset:-58px;transform:rotate(35deg) scaleY(.35);
+      border-color:rgba(84,214,200,.38);
+    }
+
+    .initials{
+      position:absolute;font-size:78px;font-weight:900;
+      letter-spacing:-8px;color:#fff;
+      text-shadow:0 8px 30px rgba(0,0,0,.35);direction:ltr;
+    }
+
+    .float-card{
+      position:absolute;background:rgba(18,28,45,.88);
+      border:1px solid var(--line);backdrop-filter:blur(12px);
+      padding:12px 16px;border-radius:14px;
+      box-shadow:var(--shadow);font-size:13px;color:#dbe4f4;
+    }
+    .float-card.one{top:48px;right:0}
+    .float-card.two{bottom:48px;left:0}
+
+    section{padding:76px 0}
+    .section-head{
+      display:flex;align-items:end;justify-content:space-between;
+      gap:20px;margin-bottom:30px;
+    }
+    .kicker{color:var(--accent2);font-size:13px;font-weight:700}
+    .section-title{font-size:clamp(28px,4vw,40px);margin:5px 0 0}
+    .section-desc{color:var(--muted);max-width:500px;margin:0}
+
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .card{
+      background:linear-gradient(145deg,rgba(20,31,49,.88),rgba(13,21,35,.9));
+      border:1px solid var(--line);border-radius:20px;
+      padding:26px;box-shadow:var(--shadow);
+    }
+    .card h3{margin:0 0 10px;font-size:19px}
+    .card p{color:var(--muted);margin:0}
+
+    .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}
+    .stat{
+      padding:18px;border:1px solid var(--line);
+      border-radius:15px;background:rgba(255,255,255,.025);
+    }
+    .stat strong{display:block;font-size:25px;color:#c3ccff}
+    .stat span{font-size:12px;color:var(--muted)}
+
+    .skills{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .skill{
+      padding:20px;border-radius:16px;border:1px solid var(--line);
+      background:rgba(17,27,43,.75);
+    }
+    .skill .ico{font-size:24px}
+    .skill h3{font-size:15px;margin:9px 0 3px}
+    .skill p{font-size:12px;color:var(--muted);margin:0}
+
+    .projects{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .project{overflow:hidden;padding:0}
+    .project-art{
+      height:155px;display:grid;place-items:center;
+      background:radial-gradient(circle at 50% 30%,rgba(137,151,255,.32),transparent 55%),linear-gradient(135deg,#1b2944,#111827);
+      border-bottom:1px solid var(--line);font-size:42px;
+    }
+    .project-body{padding:20px}
+    .project-body p{font-size:13px;color:var(--muted)}
+    .tag{
+      display:inline-block;font-size:11px;color:#c4d0ff;
+      background:rgba(139,156,255,.1);
+      padding:4px 9px;border-radius:99px;margin:10px 4px 0 0;
+    }
+
+    .contact-box{
+      display:flex;align-items:center;justify-content:space-between;
+      gap:25px;background:linear-gradient(120deg,rgba(101,120,232,.2),rgba(84,214,200,.08));
+      border:1px solid rgba(139,156,255,.24);
+      border-radius:22px;padding:34px;
+    }
+    .contact-box p{color:var(--muted);margin:5px 0 0}
+    .contact-actions{display:flex;gap:10px;flex-wrap:wrap}
+
+    footer{
+      padding:28px 0;border-top:1px solid var(--line);
+      color:var(--muted);font-size:13px;
+    }
+    .footer-inner{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+
+    .admin-modal{
+      position:fixed;inset:0;background:rgba(2,6,15,.78);
+      backdrop-filter:blur(10px);display:none;
+      align-items:center;justify-content:center;
+      padding:18px;z-index:50;
+    }
+    .admin-modal.show{display:flex}
+    .admin-panel{
+      width:min(560px,100%);max-height:90vh;overflow:auto;
+      background:#101827;border:1px solid var(--line);
+      border-radius:20px;padding:24px;box-shadow:var(--shadow);
+    }
+    .admin-top{
+      display:flex;align-items:center;
+      justify-content:space-between;gap:15px;margin-bottom:15px;
+    }
+    .admin-panel h2{margin:0;font-size:24px}
+    .admin-form{display:grid;gap:12px}
+    .admin-form label{display:grid;gap:6px;color:#cbd5e1;font-size:13px}
+    .admin-form input,.admin-form textarea{
+      width:100%;background:#0a1220;border:1px solid var(--line);
+      border-radius:10px;padding:12px;color:var(--text);font:inherit;
+      outline:none;
+    }
+    .admin-form input:focus,.admin-form textarea:focus{border-color:var(--accent)}
+    .admin-form textarea{min-height:80px;resize:vertical}
+    .admin-note{font-size:12px;color:var(--muted);margin:0 0 14px}
+    .admin-list{display:grid;gap:8px;margin-top:16px}
+    .admin-entry{
+      display:flex;justify-content:space-between;gap:10px;
+      align-items:center;background:rgba(255,255,255,.035);
+      padding:10px 12px;border-radius:10px;font-size:13px;
+    }
     .danger{color:#ff9b9b;border-color:rgba(255,120,120,.3)}
-    .admin-fab{position:fixed;bottom:18px;left:18px;z-index:10;opacity:.7;font-size:12px;padding:8px 12px}
-    .toast{position:fixed;bottom:22px;right:22px;background:#14243a;border:1px solid var(--line);padding:12px 18px;border-radius:12px;box-shadow:var(--shadow);display:none;z-index:40}
-    @media(max-width:850px){.nav-links{display:none;position:absolute;top:76px;right:0;left:0;padding:18px 22px;background:#0d1524;border-bottom:1px solid var(--line);flex-direction:column;gap:12px}.nav-links.open{display:flex}.menu-btn{display:block}.nav-actions .btn{display:none}.hero{grid-template-columns:1fr;padding-top:70px;gap:15px;text-align:center}.hero p{margin-left:auto;margin-right:auto}.hero-cta{justify-content:center}.visual{min-height:310px}.orb{width:210px;height:210px}.initials{font-size:65px}.float-card.one{right:8%}.float-card.two{left:8%}.section-head{display:block}.section-desc{margin-top:10px}.skills{grid-template-columns:repeat(2,1fr)}.projects{grid-template-columns:repeat(2,1fr)}}
-    @media(max-width:560px){.contact-actions{margin-top:18px}.contact-actions .btn{width:100%}.container{width:min(100% - 28px,1120px)}nav{height:68px}.nav-links{top:68px}.brand{font-size:16px}.hero{min-height:auto;padding:65px 0 45px}h1{font-size:42px}.hero p{font-size:15px}.visual{min-height:270px}.orb{width:180px;height:180px}.initials{font-size:56px}.float-card{font-size:11px;padding:9px 11px}.float-card.one{top:25px}.float-card.two{bottom:25px}section{padding:55px 0}.about-grid,.projects{grid-template-columns:1fr}.stats{gap:7px}.stat{padding:12px 8px}.stat strong{font-size:20px}.stat span{font-size:10px}.skills{gap:9px}.skill{padding:15px}.contact-box{display:block;padding:24px}.contact-box .btn{margin-top:18px;width:100%}.admin-fab{bottom:10px;left:10px}}
+    .admin-fab{
+      position:fixed;bottom:18px;left:18px;z-index:10;
+      opacity:.8;font-size:12px;padding:8px 12px;
+    }
+    .toast{
+      position:fixed;bottom:22px;right:22px;
+      background:#14243a;border:1px solid var(--line);
+      padding:12px 18px;border-radius:12px;
+      box-shadow:var(--shadow);display:none;z-index:60;
+    }
+
+    @media(max-width:850px){
+      .nav-links{
+        display:none;position:absolute;top:76px;right:0;left:0;
+        padding:18px 22px;background:#0d1524;
+        border-bottom:1px solid var(--line);
+        flex-direction:column;gap:12px;
+      }
+      .nav-links.open{display:flex}
+      .menu-btn{display:block}
+      .nav-actions .btn{display:none}
+      .hero{grid-template-columns:1fr;padding-top:70px;gap:15px;text-align:center}
+      .hero p{margin-left:auto;margin-right:auto}
+      .hero-cta{justify-content:center}
+      .visual{min-height:310px}
+      .orb{width:210px;height:210px}
+      .initials{font-size:65px}
+      .float-card.one{right:8%}
+      .float-card.two{left:8%}
+      .section-head{display:block}
+      .section-desc{margin-top:10px}
+      .skills{grid-template-columns:repeat(2,1fr)}
+      .projects{grid-template-columns:repeat(2,1fr)}
+    }
+
+    @media(max-width:560px){
+      .container{width:min(100% - 28px,1120px)}
+      nav{height:68px}
+      .nav-links{top:68px}
+      .brand{font-size:16px}
+      .hero{min-height:auto;padding:65px 0 45px}
+      h1{font-size:42px}
+      .hero p{font-size:15px}
+      .visual{min-height:270px}
+      .orb{width:180px;height:180px}
+      .initials{font-size:56px}
+      .float-card{font-size:11px;padding:9px 11px}
+      .float-card.one{top:25px}
+      .float-card.two{bottom:25px}
+      section{padding:55px 0}
+      .about-grid,.projects{grid-template-columns:1fr}
+      .stats{gap:7px}
+      .stat{padding:12px 8px}
+      .stat strong{font-size:20px}
+      .stat span{font-size:10px}
+      .skills{gap:9px}
+      .skill{padding:15px}
+      .contact-box{display:block;padding:24px}
+      .contact-actions{margin-top:18px}
+      .contact-actions .btn{width:100%}
+      .admin-fab{bottom:10px;left:10px}
+    }
   </style>
 </head>
+
 <body>
+
   <div class="nav-wrap">
     <nav class="container">
       <a class="brand" href="#home">ESLAM<span>.</span></a>
+
       <div class="nav-links" id="navLinks">
-        <a href="#home">الرئيسية</a><a href="#about">من أنا</a><a href="#skills">مهاراتي</a><a href="#projects">أعمالي</a><a href="#contact">تواصل معي</a>
+        <a href="#home">الرئيسية</a>
+        <a href="#about">من أنا</a>
+        <a href="#skills">مهاراتي</a>
+        <a href="#projects">أعمالي</a>
+        <a href="#contact">تواصل معي</a>
       </div>
-      <div class="nav-actions"><a class="btn primary" href="#contact">خلينا نتواصل ↗</a><button class="menu-btn" id="menuBtn" aria-label="فتح القائمة">☰</button></div>
+
+      <div class="nav-actions">
+        <a class="btn primary" href="#contact">خلينا نتواصل ↗</a>
+        <button class="menu-btn" id="menuBtn">☰</button>
+      </div>
     </nav>
   </div>
 
   <main>
+
     <header class="container hero" id="home">
       <div>
-        <div class="eyebrow"><span class="dot"></span> متاح للتعلم وتنفيذ أفكار جديدة</div>
-        <h1>أهلاً، أنا <span class="gradient">إسلام سامح</span><br>أصنع أفكارًا رقمية.</h1>
-        <p>مصمم ومطور مهتم ببناء المواقع والتجارب الرقمية. هنا هتلاقي نبذة عني، مهاراتي، والمشاريع اللي بشتغل عليها.</p>
-        <div class="hero-cta"><a class="btn primary" href="#projects">شاهد أعمالي <span>↙</span></a><a class="btn" href="#about">اعرف更多 عني</a></div>
+        <div class="eyebrow">
+          <span class="dot"></span>
+          متاح للتعلم وتنفيذ أفكار جديدة
+        </div>
+
+        <h1>
+          أهلاً، أنا <span class="gradient">إسلام سامح</span><br>
+          أصنع أفكارًا رقمية.
+        </h1>
+
+        <p>
+          مصمم ومطور مهتم ببناء المواقع والتجارب الرقمية.
+          هنا هتلاقي نبذة عني ومهاراتي والمشاريع اللي بشتغل عليها.
+        </p>
+
+        <div class="hero-cta">
+          <a class="btn primary" href="#projects">شاهد أعمالي ↙</a>
+          <a class="btn" href="#about">اعرف أكتر عني</a>
+        </div>
       </div>
-      <div class="visual" aria-label="شعار ES تجريدي بدون صورة شخصية">
-        <div class="orb"></div><div class="initials">ES</div>
-        <div class="float-card one">✦ أفكار إبداعية</div><div class="float-card two">⌘ تصميم • تطوير</div>
+
+      <div class="visual">
+        <div class="orb"></div>
+        <div class="initials">ES</div>
+        <div class="float-card one">✦ أفكار إبداعية</div>
+        <div class="float-card two">⌘ تصميم • تطوير</div>
       </div>
     </header>
 
     <section id="about">
       <div class="container">
-        <div class="section-head"><div><div class="kicker">01 / ABOUT</div><h2 class="section-title">خليني أعرفك بنفسي</h2></div><p class="section-desc">مساحة بسيطة تحكي قصتي واهتماماتي وطموحي في عالم التكنولوجيا.</p></div>
-        <div class="about-grid">
-          <article class="card"><h3>من أنا؟</h3><p>أنا إسلام سامح، مهتم بالتصميم والبرمجة وصناعة المشاريع الرقمية. بحب أتعلم باستمرار وأحوّل الأفكار إلى تجارب مفيدة وسهلة الاستخدام.</p></article>
-          <article class="card"><h3>هدفي</h3><p>أطوّر مهاراتي، أشارك مشاريعي، وأبني حلولًا رقمية تجمع بين الشكل الجميل والأداء الجيد.</p></article>
+        <div class="section-head">
+          <div>
+            <div class="kicker">01 / ABOUT</div>
+            <h2 class="section-title">خليني أعرفك بنفسي</h2>
+          </div>
+          <p class="section-desc">
+            مساحة بسيطة تحكي قصتي واهتماماتي وطموحي في عالم التكنولوجيا.
+          </p>
         </div>
-        <div class="stats"><div class="stat"><strong>∞</strong><span>أفكار قابلة للتطوير</span></div><div class="stat"><strong>24/7</strong><span>رحلة تعلّم مستمرة</span></div><div class="stat"><strong>ES</strong><span>علامتي الشخصية</span></div></div>
+
+        <div class="about-grid">
+          <article class="card">
+            <h3>من أنا؟</h3>
+            <p>
+              أنا إسلام سامح، مهتم بالتصميم والبرمجة وصناعة المشاريع الرقمية.
+              بحب أتعلم باستمرار وأحوّل الأفكار إلى تجارب مفيدة وسهلة الاستخدام.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>هدفي</h3>
+            <p>
+              أطوّر مهاراتي، أشارك مشاريعي، وأبني حلولًا رقمية
+              تجمع بين الشكل الجميل والأداء الجيد.
+            </p>
+          </article>
+        </div>
+
+        <div class="stats">
+          <div class="stat">
+            <strong>∞</strong>
+            <span>أفكار قابلة للتطوير</span>
+          </div>
+          <div class="stat">
+            <strong>24/7</strong>
+            <span>رحلة تعلّم مستمرة</span>
+          </div>
+          <div class="stat">
+            <strong>ES</strong>
+            <span>علامتي الشخصية</span>
+          </div>
+        </div>
       </div>
     </section>
 
     <section id="skills">
       <div class="container">
-        <div class="section-head"><div><div class="kicker">02 / SKILLS</div><h2 class="section-title">المهارات والاهتمامات</h2></div><p class="section-desc">المجالات اللي بتعلم فيها وبطوّر نفسي — ويمكن تعديلها وإضافة مستويات لكل مهارة لاحقًا.</p></div>
+        <div class="section-head">
+          <div>
+            <div class="kicker">02 / SKILLS</div>
+            <h2 class="section-title">المهارات والاهتمامات</h2>
+          </div>
+          <p class="section-desc">
+            المجالات اللي بتعلم فيها وبطوّر نفسي.
+          </p>
+        </div>
+
         <div class="skills">
-          <div class="skill"><div class="ico">🎨</div><h3>تصميم الإعلانات</h3><p>تصميم بصري وهوية جذابة</p></div>
-          <div class="skill"><div class="ico">💻</div><h3>تطوير المواقع</h3><p>واجهات ويب وتجارب تفاعلية</p></div>
-          <div class="skill"><div class="ico">⚙️</div><h3>البرمجة</h3><p>بناء الأدوات والمشاريع</p></div>
-          <div class="skill"><div class="ico">✨</div><h3>أدوات الذكاء الاصطناعي</h3><p>استخدام AI لدعم الإبداع</p></div>
+          <div class="skill">
+            <div class="ico">🎨</div>
+            <h3>تصميم الإعلانات</h3>
+            <p>تصميم بصري وهوية جذابة</p>
+          </div>
+
+          <div class="skill">
+            <div class="ico">💻</div>
+            <h3>تطوير المواقع</h3>
+            <p>واجهات ويب وتجارب تفاعلية</p>
+          </div>
+
+          <div class="skill">
+            <div class="ico">⚙️</div>
+            <h3>البرمجة</h3>
+            <p>بناء الأدوات والمشاريع</p>
+          </div>
+
+          <div class="skill">
+            <div class="ico">✨</div>
+            <h3>الذكاء الاصطناعي</h3>
+            <p>استخدام AI لدعم الإبداع</p>
+          </div>
         </div>
       </div>
     </section>
 
-<section id="projects">
-  <div class="container">
-    <div class="section-head">
-      <div>
-        <div class="kicker">03 / PROJECTS</div>
-        <h2 class="section-title">مشاريعي</h2>
-      </div>
-      <p class="section-desc">
-        مشاريعي الرقمية التي أعمل على تطويرها وتنفيذها.
-      </p>
-    </div>
-
-    <div class="projects">
-      <article class="card project">
-        <div class="project-art">🤖</div>
-
-        <div class="project-body">
-          <h3>بوت مواد أولى ثانوي ELITE</h3>
-
-          <p>
-            بوت تعليمي على تليجرام لمساعدة طلاب الصف الأول الثانوي
-            في الوصول إلى المواد الدراسية والمراجعات والامتحانات
-            والمحتوى التعليمي بسهولة.
+    <!-- المشروع الحقيقي الوحيد -->
+    <section id="projects">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="kicker">03 / PROJECTS</div>
+            <h2 class="section-title">مشاريعي</h2>
+          </div>
+          <p class="section-desc">
+            مشاريعي الرقمية التي أعمل على تطويرها وتنفيذها.
           </p>
-
-          <span class="tag">Telegram Bot</span>
-          <span class="tag">Education</span>
-          <span class="tag">ELITE</span>
-
-          <a
-            href="https://t.me/Islamsamehbot?start=ref_7148990368"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn btn-primary"
-            style="display:inline-flex; margin-top:18px;"
-          >
-            افتح البوت الآن ↗
-          </a>
         </div>
-      </article>
-    </div>
-  </div>
-</section>
+
+        <div class="projects" id="projectGrid">
+
+          <article class="card project">
+            <div class="project-art">🤖</div>
+
+            <div class="project-body">
+              <h3>بوت مواد أولى ثانوي ELITE</h3>
+
+              <p>
+                بوت تعليمي على تليجرام لمساعدة طلاب الصف الأول الثانوي
+                في الوصول إلى المواد الدراسية والمراجعات والامتحانات
+                والمحتوى التعليمي بسهولة.
+              </p>
+
+              <span class="tag">Telegram Bot</span>
+              <span class="tag">Education</span>
+              <span class="tag">ELITE</span>
+
+              <p style="margin-top:18px">
+                <a
+                  class="btn primary"
+                  href="https://t.me/Islamsamehbot?start=ref_7148990368"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  افتح البوت الآن ↗
+                </a>
+              </p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
 
     <section id="contact">
       <div class="container">
-        <div class="contact-box"><div><div class="kicker">04 / CONTACT</div><h2 class="section-title">عندك فكرة؟ خلينا نتكلم.</h2><p>تقدر تتواصل معايا مباشرة عن طريق البريد الإلكتروني أو الهاتف.</p><div class="contact-actions"><a class="btn primary" href="mailto:i04450169@gmail.com">✉ البريد الإلكتروني</a><a class="btn" href="tel:01201850306">☎ 01201850306</a></div></div>
+        <div class="contact-box">
+          <div>
+            <div class="kicker">04 / CONTACT</div>
+            <h2 class="section-title">عندك فكرة؟ خلينا نتكلم.</h2>
+            <p>تقدر تتواصل معايا مباشرة عن طريق البريد الإلكتروني أو الهاتف.</p>
+
+            <div class="contact-actions">
+              <a class="btn primary" href="mailto:i04450169@gmail.com">
+                ✉ البريد الإلكتروني
+              </a>
+
+              <a class="btn" href="tel:01201850306">
+                ☎ 01201850306
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
+
   </main>
 
-  <footer><div class="container footer-inner"><span>© <span id="year"></span> ESLAM SAMEH. جميع الحقوق محفوظة.</span><span>صُنع بشغف للتعلّم والإبداع ✦</span></div></footer>
-  <button class="btn admin-fab" id="adminBtn" title="معاينة لوحة الإدارة">⚙ معاينة الإدارة</button>
+  <footer>
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> ESLAM SAMEH. جميع الحقوق محفوظة.</span>
+      <span>صُنع بشغف للتعلّم والإبداع ✦</span>
+    </div>
+  </footer>
+
+  <button class="btn admin-fab" id="adminBtn">
+    ⚙ لوحة الإدارة
+  </button>
+
   <div class="admin-modal" id="adminModal" aria-hidden="true">
-    <div class="admin-panel" role="dialog" aria-modal="true" aria-labelledby="adminTitle">
-      <div class="admin-top"><h2 id="adminTitle">لوحة إدارة المشاريع</h2><button class="btn" id="closeAdmin" type="button">إغلاق ✕</button></div>
-      <p class="admin-note">أضف موقعًا إلى معرض أعمالك. هذه نسخة تجريبية تحفظ الإضافات على نفس المتصفح فقط، وليست لوحة إدارة مؤمنة أو متصلة بقاعدة بيانات حتى الآن.</p>
+    <div class="admin-panel" role="dialog" aria-modal="true">
+
+      <div class="admin-top">
+        <h2>لوحة إدارة المشاريع</h2>
+        <button class="btn" id="closeAdmin">إغلاق ✕</button>
+      </div>
+
+      <p class="admin-note">
+        أضف مواقعك إلى معرض الأعمال. الإضافات تُحفظ على نفس المتصفح فقط.
+      </p>
+
       <form class="admin-form" id="projectForm">
-        <label>اسم الموقع<input id="projectName" required maxlength="60" placeholder="مثال: موقعي الشخصي"></label>
-        <label>رابط الموقع<input id="projectUrl" type="url" required placeholder="https://example.com"></label>
-        <label>وصف مختصر<textarea id="projectDescription" maxlength="180" placeholder="اكتب نبذة قصيرة عن الموقع"></textarea></label>
-        <button class="btn primary" type="submit">＋ إضافة الموقع للمعرض</button>
+        <label>
+          اسم الموقع
+          <input id="projectName" required maxlength="60"
+                 placeholder="مثال: موقعي الشخصي">
+        </label>
+
+        <label>
+          رابط الموقع
+          <input id="projectUrl" type="url" required
+                 placeholder="https://example.com">
+        </label>
+
+        <label>
+          وصف مختصر
+          <textarea id="projectDescription" maxlength="180"
+                    placeholder="اكتب نبذة قصيرة عن الموقع"></textarea>
+        </label>
+
+        <button class="btn primary" type="submit">
+          ＋ إضافة الموقع للمعرض
+        </button>
       </form>
+
       <div class="admin-list" id="adminProjectList"></div>
     </div>
   </div>
+
   <div class="toast" id="toast" role="status"></div>
 
   <script>
-    const menuBtn=document.getElementById('menuBtn'), navLinks=document.getElementById('navLinks');
-    menuBtn.addEventListener('click',()=>navLinks.classList.toggle('open'));
-    navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>navLinks.classList.remove('open')));
-    document.getElementById('year').textContent=new Date().getFullYear();
-    const toast=document.getElementById('toast');
-    function notify(message){toast.textContent=message;toast.style.display='block';clearTimeout(window.toastTimer);window.toastTimer=setTimeout(()=>toast.style.display='none',2800)}
-    const adminModal=document.getElementById('adminModal');
-    const projectForm=document.getElementById('projectForm');
-    const projectGrid=document.querySelector('.projects');
-    const adminProjectList=document.getElementById('adminProjectList');
-    const storageKey='eslamSamehPortfolioProjects';
-    let savedProjects=[];
-    try{savedProjects=JSON.parse(localStorage.getItem(storageKey)||'[]');if(!Array.isArray(savedProjects))savedProjects=[];}catch(_){savedProjects=[];}
-    function openAdmin(){adminModal.classList.add('show');adminModal.setAttribute('aria-hidden','false');renderAdminList();}
-    function closeAdmin(){adminModal.classList.remove('show');adminModal.setAttribute('aria-hidden','true');}
-    function saveProjects(){try{localStorage.setItem(storageKey,JSON.stringify(savedProjects));}catch(_){notify('تعذر حفظ البيانات في هذا المتصفح.');}}
-    function safeText(value){return String(value).replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));}
-    function renderProjects(){
-      savedProjects.forEach((p,index)=>{
-        const article=document.createElement('article');article.className='card project';
-        article.innerHTML='<div class="project-art">↗</div><div class="project-body"><h3>'+safeText(p.name)+'</h3><p>'+safeText(p.description||'مشروع من أعمال إسلام سامح.')+'</p><span class="tag">موقع إلكتروني</span><p style="margin-top:12px"><a class="btn" target="_blank" rel="noopener noreferrer" href="'+safeText(p.url)+'">زيارة الموقع ↗</a></p></div>';
+    // القائمة للموبايل
+    const menuBtn = document.getElementById("menuBtn");
+    const navLinks = document.getElementById("navLinks");
+
+    menuBtn.addEventListener("click", () => {
+      navLinks.classList.toggle("open");
+    });
+
+    navLinks.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("open");
+      });
+    });
+
+    // السنة الحالية
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+    // رسالة التنبيه
+    const toast = document.getElementById("toast");
+
+    function notify(message) {
+      toast.textContent = message;
+      toast.style.display = "block";
+
+      clearTimeout(window.toastTimer);
+
+      window.toastTimer = setTimeout(() => {
+        toast.style.display = "none";
+      }, 2800);
+    }
+
+    // إعدادات لوحة الإدارة
+    const ADMIN_CODE = "0120";
+
+    const adminModal = document.getElementById("adminModal");
+    const projectForm = document.getElementById("projectForm");
+    const projectGrid = document.getElementById("projectGrid");
+    const adminProjectList = document.getElementById("adminProjectList");
+
+    const storageKey = "eslamSamehPortfolioProjects";
+
+    let savedProjects = [];
+
+    try {
+      savedProjects = JSON.parse(
+        localStorage.getItem(storageKey) || "[]"
+      );
+
+      if (!Array.isArray(savedProjects)) {
+        savedProjects = [];
+      }
+    } catch (error) {
+      savedProjects = [];
+    }
+
+    // فتح لوحة الإدارة بعد إدخال الرمز
+    function openAdmin() {
+      const enteredCode = prompt("أدخل رمز دخول لوحة الإدارة:");
+
+      if (enteredCode === null) {
+        return;
+      }
+
+      if (enteredCode !== ADMIN_CODE) {
+        notify("رمز الدخول غير صحيح!");
+        return;
+      }
+
+      adminModal.classList.add("show");
+      adminModal.setAttribute("aria-hidden", "false");
+
+      renderAdminList();
+    }
+
+    // إغلاق لوحة الإدارة
+    function closeAdmin() {
+      adminModal.classList.remove("show");
+      adminModal.setAttribute("aria-hidden", "true");
+    }
+
+    // حفظ المشاريع
+    function saveProjects() {
+      try {
+        localStorage.setItem(
+          storageKey,
+          JSON.stringify(savedProjects)
+        );
+      } catch (error) {
+        notify("تعذر حفظ البيانات في المتصفح.");
+      }
+    }
+
+    // حماية النصوص من إدخال HTML
+    function safeText(value) {
+      return String(value).replace(/[&<>"']/g, character => ({
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        '"': "&quot;",
+        "'": "&#39;"
+      })[character]);
+    }
+
+    // عرض المشاريع المحفوظة
+    function renderProjects() {
+      document.querySelectorAll("[data-dynamic-project]")
+        .forEach(card => card.remove());
+
+      savedProjects.forEach(project => {
+        const article = document.createElement("article");
+
+        article.className = "card project";
+        article.setAttribute("data-dynamic-project", "true");
+
+        article.innerHTML = `
+          <div class="project-art">↗</div>
+
+          <div class="project-body">
+            <h3>${safeText(project.name)}</h3>
+
+            <p>
+              ${safeText(project.description || "مشروع من أعمال إسلام سامح.")}
+            </p>
+
+            <span class="tag">موقع إلكتروني</span>
+
+            <p style="margin-top:12px">
+              <a
+                class="btn"
+                target="_blank"
+                rel="noopener noreferrer"
+                href="${safeText(project.url)}"
+              >
+                زيارة الموقع ↗
+              </a>
+            </p>
+          </div>
+        `;
+
         projectGrid.appendChild(article);
       });
     }
-    function renderAdminList(){
-      adminProjectList.innerHTML='';
-      if(!savedProjects.length){adminProjectList.innerHTML='<p class="admin-note">لم تضف مواقع من لوحة الإدارة حتى الآن.</p>';return;}
-      savedProjects.forEach((p,index)=>{
-        const row=document.createElement('div');row.className='admin-entry';
-        row.innerHTML='<span>'+safeText(p.name)+'</span><button class="btn danger" type="button" data-delete="'+index+'">حذف</button>';
+
+    // عرض قائمة الإدارة
+    function renderAdminList() {
+      adminProjectList.innerHTML = "";
+
+      if (!savedProjects.length) {
+        adminProjectList.innerHTML =
+          '<p class="admin-note">لا توجد مواقع مضافة حتى الآن.</p>';
+        return;
+      }
+
+      savedProjects.forEach((project, index) => {
+        const row = document.createElement("div");
+
+        row.className = "admin-entry";
+
+        row.innerHTML = `
+          <span>${safeText(project.name)}</span>
+          <button class="btn danger" type="button"
+                  data-delete="${index}">
+            حذف
+          </button>
+        `;
+
         adminProjectList.appendChild(row);
       });
     }
+
+    // تحميل المشاريع عند فتح الموقع
     renderProjects();
-    document.getElementById('adminBtn').addEventListener('click',openAdmin);
-    document.getElementById('closeAdmin').addEventListener('click',closeAdmin);
-    adminModal.addEventListener('click',e=>{if(e.target===adminModal)closeAdmin();});
-    document.addEventListener('keydown',e=>{if(e.key==='Escape')closeAdmin();});
-    projectForm.addEventListener('submit',e=>{
-      e.preventDefault();
-      const name=document.getElementById('projectName').value.trim();
-      const url=document.getElementById('projectUrl').value.trim();
-      const description=document.getElementById('projectDescription').value.trim();
-      try{const parsed=new URL(url);if(!['http:','https:'].includes(parsed.protocol))throw new Error('invalid');}
-      catch(_){notify('اكتب رابطًا صحيحًا يبدأ بـ https://');return;}
-      savedProjects.push({name,url,description});
-      saveProjects();
-      const article=document.createElement('article');article.className='card project';
-      article.innerHTML='<div class="project-art">↗</div><div class="project-body"><h3>'+safeText(name)+'</h3><p>'+safeText(description||'مشروع من أعمال إسلام سامح.')+'</p><span class="tag">موقع إلكتروني</span><p style="margin-top:12px"><a class="btn" target="_blank" rel="noopener noreferrer" href="'+safeText(url)+'">زيارة الموقع ↗</a></p></div>';
-      projectGrid.appendChild(article);
-      projectForm.reset();renderAdminList();notify('تمت إضافة الموقع إلى معرض الأعمال.');
+
+    // أحداث الأزرار
+    document.getElementById("adminBtn")
+      .addEventListener("click", openAdmin);
+
+    document.getElementById("closeAdmin")
+      .addEventListener("click", closeAdmin);
+
+    adminModal.addEventListener("click", event => {
+      if (event.target === adminModal) {
+        closeAdmin();
+      }
     });
-    adminProjectList.addEventListener('click',e=>{
-      const btn=e.target.closest('[data-delete]');if(!btn)return;
-      const index=Number(btn.dataset.delete);if(!Number.isInteger(index))return;
-      savedProjects.splice(index,1);saveProjects();
-      projectGrid.querySelectorAll('.project').forEach(card=>card.remove());
-      renderProjects();renderAdminList();notify('تم حذف الموقع من المعرض.');
+
+    document.addEventListener("keydown", event => {
+      if (event.key === "Escape") {
+        closeAdmin();
+      }
+    });
+
+    // إضافة مشروع جديد
+    projectForm.addEventListener("submit", event => {
+      event.preventDefault();
+
+      const name = document.getElementById("projectName")
+        .value.trim();
+
+      const url = document.getElementById("projectUrl")
+        .value.trim();
+
+      const description = document.getElementById("projectDescription")
+        .value.trim();
+
+      try {
+        const parsedUrl = new URL(url);
+
+        if (!["http:", "https:"].includes(parsedUrl.protocol)) {
+          throw new Error("Invalid URL");
+        }
+      } catch (error) {
+        notify("اكتب رابطًا صحيحًا يبدأ بـ https://");
+        return;
+      }
+
+      savedProjects.push({
+        name,
+        url,
+        description
+      });
+
+      saveProjects();
+      renderProjects();
+      renderAdminList();
+
+      projectForm.reset();
+
+      notify("تمت إضافة الموقع بنجاح!");
+    });
+
+    // حذف مشروع
+    adminProjectList.addEventListener("click", event => {
+      const button = event.target.closest("[data-delete]");
+
+      if (!button) return;
+
+      const index = Number(button.dataset.delete);
+
+      if (!Number.isInteger(index) ||
+          index < 0 ||
+          index >= savedProjects.length) {
+        return;
+      }
+
+      savedProjects.splice(index, 1);
+
+      saveProjects();
+      renderProjects();
+      renderAdminList();
+
+      notify("تم حذف الموقع من المعرض.");
     });
   </script>
+
 </body>
 </html>
